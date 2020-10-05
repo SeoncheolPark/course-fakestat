@@ -2,4 +2,14 @@
 title: "Homework"
 ---
 
-Homework 입니다.
+# Book reading assignment
+
+All students should read at least one book from the book list and submit a 3-page reading report until the end of this semester.
+
+## Book list
+
+- **신도 주사위 놀이를 한다**. 이언 스튜어트 저, 장영재 역. 북라이프
+
+- **신호와 소음**. 네이트 실버 저, 이경식 역. 더 퀘스트
+
+- **벌거벗은 통계학**. 찰스 윌런 저, 김명철 역. 책읽는 수요일

@@ -1,2 +1,2 @@
 # course-fakestat
-fake statistics course
+fake statistics course website

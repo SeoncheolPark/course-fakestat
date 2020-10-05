@@ -1,5 +1,5 @@
 ---
-title: "Syllabus"
+title: "STAT: Introduction to Statistics and Data Science"
 author: "Seoncheol Park"
 date: "3/31/2020"
 output: pdf_document
@@ -9,22 +9,38 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+**Instructor**: Seoncheol Park
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+**Office**: 101 AAA Hall
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+**Class Hours**: MW 09:00-10:30 a.m.
 
-```{r cars}
-summary(cars)
-```
+**Office Hours**: MW 14:00-15:30 p.m.
 
-## Including Plots
+**Class Room**: Online
 
-You can also embed plots, for example:
+**Course Webpage**:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+# Course Description
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+This course deals with basic concept of statistics and probability for future statisticians.
+
+# Required Texts
+
+This lecture will be given using lecture notes.
+
+# Grading
+
+- **40%** of your grade will be determined by weekly quiz results.
+
+- **30%** of your grade will be determined by an online final exam.
+
+- **20%** of your grade come from a 3-page reading reports.
+
+- **10%** of your grade be determined by your attendance and participation in the online class.
+
+# Course Policy
+
+- There are **no** make-ups for missed example.
+
+- Don't cheat.

@@ -1,12 +1,12 @@
-name: "Fake Statistics"
+name: "Fake Statistics Course"
 output_dir: "docs"
 navbar:
-  title: "Fake Statistics"
+  title: "Fake Statistics Course"
   left:
     - text: "Home"
       href: index.html
     - text: "Syllabus"
-      href: syllpdf.pdf
+      href: syllabus.html
     - text: "Lecture"
       menu:
         - text: "Lecture 1"
