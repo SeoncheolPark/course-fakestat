@@ -1,5 +1,5 @@
 ---
-title: "Fake Statistics Course"
+title: "Introduction to Statistics and Data Science"
 author: "Instructor: Seoncheol Park"
 ---
 

@@ -1,0 +1,567 @@
+/*
+font color (PCIC)
+#064665 (어두움)
+#70a4ba
+#d9e8df (가장 밝음)
+#7fb985
+*/
+
+/* CSS 기초
+
+(1) 태그 선택자: HTML요소를 직접 지칭하는 가장 간단한 선택자
+p { background: yellowgreen; color: darkgreen; }
+
+CSS
+<!-- HTML -->  
+<p>태그 선택자(Type Selector)</p>  
+<div>태그 선택자(Type Selector)</div>  
+태그에는 개발자가 지정해주는 스타일이 적용되지 않습니다.
+
+(2) 클래스 선택자(Class Selector)
+ CSS 
+.class1 { background: yellowgreen; color: darkgreen; }
+div.class2 { background: darkgreen; color: yellowgreen; }
+
+<!-- HTML -->  
+<p class="class1">클래스 선택자(Class Selector)</p>  
+<p class="class2">클래스 선택자(Class Selector)</p>  
+<div class="class2">클래스 선택자(Class Selector)</div>  
+
+클래스 선택자는 주어진 값을 class속성값으로 가진 HTML요소를 찾아 선택합니다. 이때 선택하려는 속성값 앞에 마침표를 추가해서 작성합니다. [예제 3] CSS 코드의 첫번째 스타일 규칙은 class1이라는 class 속성값을 가진 모든 태그를 선택합니다. 하지만 두번째 스타일 규칙처럼 마침표 앞에 태그를 붙여주면 범위를 그 특정 태그에 한합니다. 
+
+(3) 하위 선택자와 자식 선택자
+하위 선택자  E F	E 요소의 자손인 F 요소를 선택합니다.
+section ul { border: 1px dotted black; }
+
+자식 선택자 E>F	E 요소의 자식인 F 요소를 선택합니다.
+section>ul { border: 1px dotted black; }  
+
+태그들이 포함 관계를 가질 때 포함하는 요소를 부모 요소, 포함되는 요소를 자식 요소라고 합니다. 하위 선택자는 부모 요소에 포함된 '모든' 하위 요소에 스타일을 적용합니다. 하지만, 자식 선택자는 부모의 바로 아래 자식 요소에만 적용합니다. [예제 5]를 통해 선택되는 요소는 다음과 같습니다.
+
+End of CSS*/
+
+/*table of contents
+https://github.com/ShKlinkenberg/TOC-for-IOslides-in-Rmarkdown */
+ /*not working*/
+ /*
+.section { 
+  color: black; 
+}
+
+.subsection {
+  font-size: .95em; 
+  list-style-type:circle;
+}
+*/
+
+/*change logo size*/
+.gdbar img {
+  width: 328px !important;
+  height: 38px !important;
+  margin: 8px 8px;
+}
+
+.gdbar {
+  width: 328px !important;
+  height: 38px !important;
+}
+/*end of change logo size*/
+
+/*change logo size in footer*/
+slides > slide:not(.nobackground):before {
+  width: 328px;
+  height: 38px;
+  background-size: 328px 38px;
+}
+/*end of change logo size in footer*/
+
+/*ul: unordered list */
+/*https://stackoverflow.com/questions/46059001/how-i-change-the-text-color-of-bullets-in-ioslides-rmarkdown-with-a-css-file*/
+ul {
+  display: block;
+  color: black;
+}
+/*font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;*/
+/*end of ul: unordered list */
+
+/*to eliminate left margins*/
+pre {
+  width: auto;
+  left: auto;
+}
+
+#font-color {
+   color: #1a1a1a;
+   letter-spacing: 0px;
+   line-height: 1.5;
+}
+
+h3{
+  color: #064665;
+  font-weight: bold;
+}
+
+/*https://css-tricks.com/full-browser-width-bars/
+to generate full-width bar for h2
+*/
+
+h2:before, h2:after {
+  content: "";
+  position: absolute;
+  /* fill vertically */
+  top: 0;
+  bottom: 0;
+  width: 9600px;
+  right: 100%;
+  background: #064665;
+}
+
+h2:after { 
+  width: 320px;
+  left: 100%;
+  /* you're free to do something totally different here */
+  background: #064665;
+}
+/*end of 
+to generate full-width bar for h2
+*/
+
+h2{
+  position: relative;
+  width: 100%;
+  color: #d9e8df;
+  background: none !important;
+  background-color: #064665 !important;
+  background-size: cover;
+}
+/*if you want to make underline, use
+text-decoration: underline;*/
+
+/*
+margin: 0em -500%;
+  padding: 0.5em 500%;
+*/
+
+/*
+letter-spacing: 2px;
+*/
+
+/*tables
+https://stackoverflow.com/questions/25869429/custom-table-with-r-markdown-v2-and-ioslides/34754719
+*/
+table,
+.table-condensed,
+table.rmdtable {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+table,
+.table-condensed,
+table.rmdtable,
+table.rmdtable .header th,
+.table > thead > tr > th {
+  border-collapse: collapse; /*single border*/
+  border-style: solid;
+  border-spacing: 0;
+  border-width: medium 0.1em medium 0.1em;
+  border-color: black;
+  background-color: #d9e8df;
+  
+  font-weight: bold;
+  
+  color: black;
+}
+table.rmdtable th,
+table.rmdtable td,
+table th,
+table.rmdtable tr > td:first-child,
+table.rmdtable .even {
+  font-size: 100%;
+  padding: 0.4em 0.5em; /*내부 여백*/
+  color: black;
+  background: #FFF;
+  font-weight: normal;
+  
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-color: black;
+  
+  background-color: white; /* ( #f5f5f5 회색)*/
+}
+.table > tbody > tr > td {
+  border-collapse: collapse; /*single border*/
+  border-style: solid;
+  border-width: medium 0.1em medium 0.1em;
+  
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  border-color: black;
+  
+  color: black;
+}
+/*round corner 만들기용*/
+
+
+
+/*presentation title color*/
+slides > slide.title-slide hgroup h1 {
+  color: #064665;
+  font-size: 60px;
+}
+/* border-radius: 0; (round edge) */
+
+/*
+slides > slide.dark > hgroup h2 {
+  color: #FFFFBB;
+  font-size: 72px;
+  letter-spacing: 10;
+}
+
+slides > slide.dark {
+  background: none !important;
+  background-color: #444444 !important;
+}
+*/
+
+slides > slide {
+  display: none;
+  font-family: 'Martel Sans', Arial, sans-serif;
+  background: none !important;
+  background-color: white !important;
+  font-size: 24px;
+  padding-top: 0px;
+}
+/*The CSS padding properties are used to generate space around an element's content, inside of any defined borders.*/
+/* margin: auto; */
+/*original font-family is font-family: 'Open Sans', Arial, sans-serif; */
+/*"Times New Roman", Times, serif;*/
+
+#iframe{
+  height:80;
+}
+
+/*.title-slide h2, .title-slide h3 {
+    color: #e7e8e2;
+}*/
+
+.title-slide h2, .title-slide h3 {
+    color: #000000;
+}
+  
+/*change bullet color */
+/*
+ul {
+  display: block;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color: red;
+}
+*/
+
+/*caption related
+from https://github.com/rstudio/rmarkdown/issues/522 */
+
+/*1. we ininitalize the counter */
+body{
+  counter-reset:table figure;
+}
+.table{
+  width:auto;
+}
+
+/*
+.caption::before{
+  counter-increment: table;
+  content: "Table " counter(table) ": ";
+  color: #064665;
+  font-weight: bold;
+}
+*/
+
+captiontable::before{
+  content: "Table : ";
+  color: #064665;
+  font-weight: bold;
+  text-align: left;
+}
+
+/*
+.caption::before{
+  counter-increment: figure;
+  content: "Figure " counter(figure) ": ";
+  color: #064665;
+  font-weight: bold;
+}
+*/
+captionfig::before{
+  content: "Figure : ";
+  color: #064665;
+  font-weight: bold;
+  text-align: left;
+}
+
+captionfig {
+  font-style:italic;
+  margin-top:0.1em;
+  margin-bottom:0.25em;
+  width:100%;
+  text-align: left;
+  list-style-type: lower-alpha;
+}
+
+captiontable {
+  font-style:italic;
+  margin-top:0.1em;
+  margin-bottom:0.25em;
+  width:100%;
+  text-align: left;
+  list-style-type: lower-alpha;
+}
+
+
+
+/*
+.figure {
+	counter-increment: figure;
+}
+
+.figure figcaption:before {
+	content: 'Fig. ' counter(figure) ' - ';
+}
+
+.figure figcaption {
+	font-style:italic;
+  margin-top:0.1em;
+  margin-bottom:0.5em;
+  width:100%;
+  text-align: left;
+}
+*/
+
+/*
+div.figure {
+  display: table;
+}
+
+div.figure p {
+  display: table-caption;
+  caption-side: top;
+}
+*/
+
+.MathJax {
+  font-family: 'Martel Sans', Arial, sans-serif;
+}
+
+.figure p {
+  font-style:italic;
+  margin-top:0.1em;
+  margin-bottom:0.5em;
+  width:100%;
+  text-align: left;
+  caption-side: top;
+}
+
+.forceBreak { 
+  -webkit-column-break-after: always; break-after: column; }
+
+.remark-code, .remark-inline-code {
+  background: #f0f0f0;
+}
+.remark-code {
+  font-size: 24px;
+}
+.huge .remark-code { /*Change made here*/
+  font-size: 200% !important;
+}
+.tiny .remark-code { /*Change made here*/
+  font-size: 50% !important;
+}
+
+.theorem {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+    background: #d9e8df;
+    border-radius: 15px;
+    color: #000000;
+}
+.theorem:before {
+    content: "Theorem.";
+    font-weight: bold;
+    font-style: normal;
+    color: #064665;
+}
+.lemma {
+    display: block;
+    margin: 12px 0;
+    font-style: italic;
+    background: #d9e8df;
+    border-radius: 15px;
+    color: #000000;
+}
+.lemma:before {
+    content: "Lemma.";
+    font-weight: bold;
+    font-style: normal;
+    color: #064665;
+}
+.proof {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+    background: #d9e8df;
+    border-radius: 15px;
+    color: #000000;
+}
+.proof:before {
+    content: "Proof.";
+    font-style: italic;
+    color: #064665;
+}
+.proof:after {
+    content: "\25FC";
+    float:right;
+}
+.definition {
+    display: block;
+    margin: 12px 0;
+    font-style: normal;
+    background: #d9e8df;
+    border-radius: 15px;
+    /*opacity: 0.5; background 투명도 */
+    color: #000000;
+}
+.definition:before {
+    content: "Definition.";
+    font-weight: bold;
+    font-style: normal;
+    color: #064665;
+}
+    
+/* from https://github.com/inSileco/ResearchDown/blob/master/rd.css 8*/   
+.code10 .remark-code {
+    font-size: 10%;
+  }
+
+  .code20 .remark-code {
+    font-size: 20%;
+  }
+
+  .code30 .remark-code {
+    font-size: 30%;
+  }
+
+  .code40 .remark-code {
+    font-size: 40%;
+  }
+
+  .code50 .remark-code {
+    font-size: 50%;
+  }
+
+  .code60 .remark-code {
+    font-size: 60%;
+  }
+
+  .code70 .remark-code {
+    font-size: 70%;
+  }
+
+  .code80 .remark-code {
+    font-size: 80%;
+  }
+
+  .code90 .remark-code {
+    font-size: 90%;
+  }
+
+  .code100 .remark-code {
+    font-size: 100%;
+  }
+
+  .font10 {
+    font-size: 10%;
+  }
+
+  .font20 {
+    font-size: 20%;
+  }
+
+  .font30 {
+    font-size: 30%;
+  }
+
+  .font40 {
+    font-size: 40%;
+  }
+
+  .font50 {
+    font-size: 50%;
+  }
+
+  .font60 {
+    font-size: 60%;
+  }
+
+  .font70 {
+    font-size: 70%;
+  }
+
+  .font80 {
+    font-size: 80%;
+  }
+
+  .font90 {
+    font-size: 90%;
+  }
+
+  .font100 {
+    font-size: 100%;
+  }
+
+  .font110 {
+    font-size: 110%;
+  }
+
+  .font120 {
+    font-size: 120%;
+  }
+
+  .font130 {
+    font-size: 130%;
+  }
+
+  .font140 {
+    font-size: 140%;
+  }
+
+  .font150 {
+    font-size: 150%;
+  }
+
+  .font160 {
+    font-size: 160%;
+  }
+  .font170 {
+    font-size: 170%;
+  }
+  .font180 {
+    font-size: 180%;
+  }
+  .font190 {
+    font-size: 190%;
+  }
+  .font200 {
+    font-size: 200%;
+  }

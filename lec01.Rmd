@@ -9,22 +9,51 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Statstics
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- **Statistics**: 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+  + **Descriptive statistics**: organizing and summarizing sampled data
+  
+  + **Inferential statstics**: making inferences abouth populations using samples 
+  
+### Basic terminology
 
-```{r cars}
-summary(cars)
-```
+- **Population**: any large collection of objects or individuals (ex. students)
 
-## Including Plots
+- **Parameter**: any summary number that describes the entire population (ex. mean)
 
-You can also embed plots, for example:
+- **Sample**: a representative group drawn from the population
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+- **Statistics**: any summary number that describes the sample (ex. sample mean)
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Data
+
+| Student | Heart rate | Sex | Height | Exercise preference |
+|-|-|-|-|-|
+| 1 | 64 | 0 (M) | 168.5 | 2 (Normal) |
+| 2 | 58 | 1 (W) | 168.6 | 2 (Normal) |
+| 3 | 62 | 1 (W) | 157.1 | 3 (Like) |
+| 4 | 66 | 0 (M) | 183.8 | 1 (Dislike) |
+| 5 | 64 | 1 (W) | 157.4 | 2 (Normal) |
+| 6 | 64 | 0 (M) | 185.6 | 3 (Like) |
+| 7 | 94 | 1 (W) | 173.5 | 2 (Normal) |
+| 8 | 60 | 1 (W) | 170.7 | 2 (Normal) |
+| 9 | 72 | 0 (M) | 185.2 | 2 (Normal) |
+| 10 | 58 | 0 (M) | 175.3 | 2 (Normal) |
+
+***
+
+- Data can be divided into two, qualitative data and quantitative data, by characteristics of measurments:
+
+- **Categorical (qualitative) data**: 
+
+  + **Ordinal data**: order is meaningful (ex. preference)
+  
+  + **Normal data**: order is not meaningful (ex. sex)
+
+- **Quantitative data**:
+
+  + **Continuous data**: values are from an uncountable, continuous interval (ex. height)
+  
+  + **Discrete data**: values are countable (ex. heart rate)
